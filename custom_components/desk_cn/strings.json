@@ -1,0 +1,16 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Desk 升降桌",
+        "data": {
+          "base_url": "后端 API 地址",
+          "api_key": "API Key",
+          "account": "账号",
+          "password": "密码",
+          "poll_interval": "轮询间隔（秒）"
+        }
+      }
+    }
+  }
+}

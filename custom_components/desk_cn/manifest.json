@@ -1,0 +1,11 @@
+{
+  "domain": "desk_cn",
+  "name": "Desk 升降桌",
+  "version": "1.0.0",
+  "config_flow": true,
+  "documentation": "https://github.com/liulijun2019/ha-desk-cn",
+  "issue_tracker": "https://github.com/liulijun2019/ha-desk-cn/issues",
+  "codeowners": ["liulijun2019"],
+  "iot_class": "cloud_polling",
+  "integration_type": "device"
+}
