@@ -1,4 +1,4 @@
-"""Cover platform: each standing desk becomes a cover entity."""
+"""Cover platform: each curtain becomes a cover entity."""
 from __future__ import annotations
 
 from homeassistant.components.cover import (
@@ -21,18 +21,18 @@ async def async_setup_entry(
     entry: ConfigEntry,
     async_add_entities: AddEntitiesCallback,
 ) -> None:
-    """Set up cover entities (desk / curtain)."""
+    """Set up cover entities (curtain only)."""
     coordinator: DeskCoordinator = hass.data[DOMAIN][entry.entry_id]
     entities = [
         DeskCover(coordinator, device_id)
         for device_id, state in coordinator.data.items()
-        if state.get("deviceType", "desk") in ("desk", "curtain")
+        if state.get("deviceType") == "curtain"
     ]
     async_add_entities(entities)
 
 
 class DeskCover(CoordinatorEntity, CoverEntity):
-    """Represent a standing desk as a HA cover."""
+    """Represent a curtain as a HA cover."""
 
     def __init__(self, coordinator: DeskCoordinator, device_id: str) -> None:
         super().__init__(coordinator)

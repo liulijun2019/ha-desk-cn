@@ -11,3 +11,7 @@ CONF_PASSWORD = "password"
 CONF_POLL_INTERVAL = "poll_interval"
 
 DEFAULT_POLL_INTERVAL = 10  # seconds
+
+# 升降桌高度范围（厘米）
+DESK_HEIGHT_MIN = 72
+DESK_HEIGHT_MAX = 120
